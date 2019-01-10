@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Article ar = new Article();
+            string startMark = "Ferrari";
+            Car[] cars = new Car[5];
+            cars[0] =new Car( 4, "toyota",15,4,"Oil",2.5,1.3);
+        }
+    }
+    public partial class Car
+    {
+        public void InfoMark()
+        {
+            Console.WriteLine(_mark);
+        }
+    }
+}

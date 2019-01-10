@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+    class Money
+    {
+        int Nominal;
+        int NumberOfMoney;
+            Money(int nominal, int numberOfMoney)
+        {
+
+        }
+        public void PrintMoney() {
+            Console.WriteLine("Nominal", Nominal);
+            Console.WriteLine("Kolichestvo Kupur", NumberOfMoney);
+        }
+        public bool EnoughMoney(int price)
+        {
+            if (Nominal * NumberOfMoney > price) return true;
+            else return false;
+        }
+        public int NumberOfThingsOnMoney(int price)
+        {
+            if (Nominal * NumberOfMoney > price)
+            {
+                int NumberOfThings = (Nominal * NumberOfMoney) / price;
+                return NumberOfThings;
+            }
+            else return 0;
+        }
+        public int GetNominal()
+        {
+            return Nominal;
+        }
+
+        public void SetTitle(int nominal)
+        {
+            Nominal = nominal;
+        }
+        public int GetNumberOfMoney()
+        {
+            return NumberOfMoney;
+        }
+
+        public void SetNumberOfMoney(int numberOfMoney)
+        {
+            NumberOfMoney = numberOfMoney;
+        }
+        public int GetAmountMoney()
+        {
+            return NumberOfMoney*Nominal;
+        }
+    }
+}
